@@ -100,9 +100,8 @@
 	  .on("mouseover", function(d) {
 
 	  //Get this bar's x/y values, then augment for the tooltip
-	  var xPosition = 3*w - parseFloat(d3.select(this).attr("width"));
+	  var xPosition = 4*w - parseFloat(d3.select(this).attr("width"));
 	  //var xPosition = 2*w;
-
 	  var yPosition = parseFloat(d3.select(this).attr("y"))+2*barPadding;
 	  //Update the tooltip position and value
 	  d3.select("#tooltip")
@@ -141,7 +140,7 @@
           .transition()
           .duration(1000)
 	  .attr("y", function(d, i) {
-          return (i+1)*(h/dataset.length)-15*barPadding;
+          return (i+1)*(h/dataset.length)-(h/dataset.length - barPadding)/4;
           });
 	  };
 	  
@@ -154,7 +153,7 @@
 	  return d.Validated;
 	  })
 	  .attr("y", function(d, i) {
-          return (i+1)*(h/dataset.length)-15*barPadding;
+          return (i+1)*(h/dataset.length)-(h/dataset.length - barPadding)/4;
 	  })
 	  .attr("x", function(d) {
           return  xScale(d.Validated) -15;
