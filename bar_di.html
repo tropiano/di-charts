@@ -108,10 +108,10 @@
 	  .style("right", xPosition + "px")
 	  .style("top", yPosition + "px")
 	  .select("#value")
-	  .text((d.Positive/d.Validated*100).toFixed(1));
-          d3.select("#tooltip")
-          .select("#value2")
-          .text(d.UserId);
+	  .text((d.Positive/d.Validated*100).toFixed(1))
+      d3.select("#tooltip")
+      .select("#value2")
+      .text(d.UserId);
 	  //Show the tooltip
 	  d3.select("#tooltip").classed("hidden", false);
 	  })
