@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>D3 Page Template</title>
+
   <script type="text/javascript" src="../d3/d3.js"></script>
   
   <style type="text/css">
@@ -62,19 +63,20 @@
    	.projection(projection);
 
    var color = d3.scale.quantize()
-   	.range(["#ffffe5", "#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
+   	.range(["#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#993404", "#662506"]);
 
     //open the teams file
    d3.csv("teamsht.csv", function(data) {
-   	color.domain([
-   		d3.min(data, function(d) {
-   			return d.value;
+	  
+	color.domain([	
+		d3.min(data, function(d) {
+   			return +d.value;
    		}),
    		d3.max(data, function(d) {
-   			return d.value;
+   			return +d.value;
    		})
    	]);
-
+	
    	d3.json("italy.json", function(json) {
    		for (var i = 0; i < data.length; i++) {
    			//Grab state name
@@ -118,8 +120,8 @@
 
 				var prop = d.properties;
 
-		        var string = "<p><strong>Region</strong> " + prop.name + "</p>";
-				string += "<p><strong>Number of teams:</strong> " + prop.value + "</p>";
+		        var string = "<p>Region<strong> " + prop.name + "</strong></p>";
+				string += "<p>Teams<strong>  " + prop.value + "</strong></p>";
 
 				d3.select("#textbox")
 					.html("")
