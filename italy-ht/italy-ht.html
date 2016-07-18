@@ -23,7 +23,7 @@
 	
 	#textbox {
 	  position: absolute;
-	  top: 100px;
+	  top: 50px;
 	  left: 400px;
 	  width: 275px;
 	  height: 100px;
@@ -141,6 +141,15 @@
 				
 				d3.select("div")
 					.append("div")
+    				.style("float", "center")
+					.style("height", 20 + "px")
+					.style("text-align","left")	
+					.append("text")
+					//.attr("x", prop.valueA * 10 + 4)
+					.text("Serie A");
+					
+				d3.select("div")
+					.append("div")
     				.style("width", prop.valueA * 5 + "px")
 					.style("height", 20 + "px")
 					.style("background-color",'#fe9929')
@@ -151,7 +160,16 @@
 					.append("text")
 					//.attr("x", prop.valueA * 10 + 4)
 					.text(prop.valueA);
-								
+				
+				d3.select("div")
+					.append("div")
+    				.style("float", "center")
+					.style("height", 20 + "px")
+					.style("text-align","left")	
+					.append("text")
+					//.attr("x", prop.valueA * 10 + 4)
+					.text("Serie II");
+					
 				d3.select("div")
 					.append("div")
     				.style("width", prop.valueII * 5 + "px")
@@ -164,6 +182,15 @@
 					.append("text")
 					//.attr("x", prop.valueA * 10 + 4)
 					.text(prop.valueII);
+				
+				d3.select("div")
+					.append("div")
+    				.style("float", "center")
+					.style("height", 20 + "px")
+					.style("text-align","left")	
+					.append("text")
+					//.attr("x", prop.valueA * 10 + 4)
+					.text("Serie III");
 					
 				d3.select("div")
 					.append("div")
@@ -177,6 +204,15 @@
 					.append("text")
 					//.attr("x", prop.valueA * 10 + 4)
 					.text(prop.valueIII);
+				
+				d3.select("div")
+					.append("div")
+    				.style("float", "center")
+					.style("height", 20 + "px")
+					.style("text-align","left")	
+					.append("text")
+					//.attr("x", prop.valueA * 10 + 4)
+					.text("Serie IV");
 					
 				d3.select("div")
 					.append("div")
